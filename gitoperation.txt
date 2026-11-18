@@ -1,0 +1,25 @@
+git switch main 切换回主分支
+git pull 拉取远程仓库代码
+git branch 查看分支
+git switch -c feature_test 创建并切换到分支
+git status 查看修改的文件
+git add . 全部更改加入暂存区
+git commit -m "message" 提交到本地分支，留下提交记录
+
+git switch main 再次切回主分支
+git pull 拉取同步主分支代码
+git switch feature_test 切回该分支
+git rebase main 将该分支主分支合并
+如有冲突，修改冲突后
+git add .
+git rebase --continue
+
+远程推送
+git push -u origin feature_test 第一次推送
+git push 之后推送
+
+合并到主分支
+git switch main
+git pull  确保主干最新
+git merge --no-ff feature/ui-graphics  强制生成合并记录，保留分支存在过的痕迹
+git push  把合并结果推上云端
